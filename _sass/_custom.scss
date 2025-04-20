@@ -1,0 +1,92 @@
+// Custom styles
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Header styles
+.header-one, .header-two {
+  .site-navigation {
+    background: $header-bg;
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $header-text-color;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer styles
+.footer {
+  background: $footer-bg;
+  color: $footer-text-color;
+  .widget-title {
+    color: $footer-title-color;
+  }
+  .contact-form {
+    .form-control {
+      background: $form-bg;
+      color: $form-text-color;
+      &::placeholder {
+        color: $form-placeholder-color;
+      }
+    }
+    .btn-submit {
+      background: $accent-color;
+      color: $button-text-color;
+      &:hover {
+        background: transparent;
+        border-color: $accent-color;
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+// Section title styles
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+  .section-sub-title {
+    color: $accent-color;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: $accent-color;
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .section-title-wrapper {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+} 
