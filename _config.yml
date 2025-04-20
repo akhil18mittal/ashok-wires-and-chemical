@@ -20,7 +20,7 @@ description: >-
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/ashok-wires-and-chemicals" # the subpath of your site, e.g. /blog
-url: "https://akhilesh-inspiron-3501.github.io" # the base hostname & protocol for your site
+url: "https://akhil18mittal.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -36,6 +36,14 @@ sass:
   style: compressed
   load_paths:
     - _sass
+
+# Include these directories in the build
+include:
+  - assets/css
+  - assets/js
+  - assets/plugins
+  - assets/images
+  - assets/documents
 
 # Exclude from processing
 exclude:
