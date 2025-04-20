@@ -5,7 +5,7 @@
           <div class="col-lg-5 col-md-6 footer-widget footer-about">
             <h3 class="widget-title text-white">ABOUT US</h3>
             <div class="footer-logo mb-3 font-weight-bold" style="font-size: 18px">
-              <img src="/assets/images/awc-2.webp" alt="Constra" style="width: auto; height: 40px;">
+              <img src="{{ "/assets/images/awc-2.webp" | relative_url }}" alt="Constra" style="width: auto; height: 40px;">
              ASHOK WIRES & CHEMICALS
             </div>
             <p class="text-light">
@@ -102,12 +102,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
 
-<!-- Google Maps API -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&callback=initMap"></script>
-
 <!-- Custom Scripts -->
 <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/map.js" | relative_url }}"></script>
+
+<!-- Google Maps API -->
+<script>
+  function initMap() {
+    // Your map initialization code here
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&callback=initMap"></script>
 
 <!-- Back to top button -->
 <a href="#" class="back-to-top" id="back-to-top">
