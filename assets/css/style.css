@@ -2840,9 +2840,10 @@ img.testimonial-thumb {
 
 /* Contact Us
 ================================================== */
+/* Remove map styles */
 .map {
-  height: 450px;
-  z-index: 1;
+    height: 400px;
+    width: 100%;
 }
 
 .contact-info-box {
