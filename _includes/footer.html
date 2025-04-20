@@ -1,0 +1,113 @@
+  <footer id="footer" class="footer bg-dark">
+    <div class="footer-main py-5">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5 col-md-6 footer-widget footer-about">
+            <h3 class="widget-title text-white">ABOUT US</h3>
+            <div class="footer-logo mb-3 font-weight-bold" style="font-size: 18px">
+              <img src="/assets/images/awc-2.webp" alt="Constra" style="width: auto; height: 40px;">
+             ASHOK WIRES & CHEMICALS
+            </div>
+            <p class="text-light">
+              Ashok Wires & Chemicals is a leading manufacturer of industrial wire products, since 1996 serving diverse 
+              heavy industries with innovative screen cloth. We assure best quality products, quick and efficient service,
+              and competitive pricing. With ever changing market dynamics, Ashok Wires is equipped to provide customized
+              wire mesh screen cloth for global markets with 25 years+ experience in specialty niche market requirements.
+            </p>
+            <div class="footer-social mt-4">
+              <ul class="list-unstyled d-flex gap-3">
+                <li><a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="social-link" aria-label="Github"><i class="fab fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 ts-newsletter footer-widget mt-5 mt-md-0">
+            <h3 class="widget-title text-white">CONTACT US</h3>
+            <form action="https://formspree.io/f/xpwpveno" method="POST" class="contact-form" id="contact-form">
+              <input type="hidden" name="_subject" value="New Contact Form Submission - Ashok Wires">
+              <input type="hidden" name="form_type" value="contact">
+              <input type="hidden" name="_next" value="/?submitted=contact#footer">
+              <div class="form-group">
+                <label for="contact-name" class="content-hidden">Name</label>
+                <input type="text" class="form-control form-control-lg" id="contact-name" name="name" placeholder="Name *" required 
+                  oninvalid="this.setCustomValidity('Please enter your name')" 
+                  oninput="this.setCustomValidity('')">
+              </div>
+              <div class="form-group">
+                <label for="contact-mobile" class="content-hidden">Mobile Number</label>
+                <input type="tel" class="form-control form-control-lg" id="contact-mobile" name="mobile" placeholder="Mobile Number *" required 
+                  pattern="[0-9]{10}" 
+                  oninvalid="this.setCustomValidity('Please enter a valid 10-digit mobile number')" 
+                  oninput="this.setCustomValidity('')">
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="content-hidden">Email</label>
+                <input type="email" class="form-control form-control-lg" id="contact-email" name="email" placeholder="Email (Optional)">
+              </div>
+              <div class="form-group">
+                <label for="contact-message" class="content-hidden">Message</label>
+                <textarea class="form-control form-control-lg" id="contact-message" name="message" rows="4" placeholder="Message (Optional)"></textarea>
+              </div>
+              <div class="text-end">
+                <small class="text-light d-block mb-2">* Required fields</small>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+              </div>
+              <div id="contact-success" class="alert alert-success mt-3" style="display: none;">
+                Thank you for your message. We will get back to you soon!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="copyright-info text-light">
+              <span>Copyright &copy; <script>document.write(new Date().getFullYear())</script>, Designed &amp; Developed by <a href="https://themefisher.com" class="text-primary">Themefisher</a></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="footer-menu text-center text-md-end">
+              <ul class="list-unstyled d-flex justify-content-end gap-4 mb-0">
+                <li><a href="about.html" class="text-light">About</a></li>
+                <li><a href="team.html" class="text-light">Our people</a></li>
+                <li><a href="faq.html" class="text-light">Faq</a></li>
+                <li><a href="blog.html" class="text-light">Blog</a></li>
+                <li><a href="pricing.html" class="text-light">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+          <button class="btn btn-primary" title="Back to Top">
+            <i class="fa fa-angle-double-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Check for contact form submission success
+  const urlParams = new URLSearchParams(window.location.search);
+  const submitted = urlParams.get('submitted');
+  const contactSuccess = document.getElementById('contact-success');
+  
+  if (submitted === 'contact' && contactSuccess) {
+    contactSuccess.style.display = 'block';
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      contactSuccess.style.display = 'none';
+    }, 5000);
+  }
+});
+</script>
