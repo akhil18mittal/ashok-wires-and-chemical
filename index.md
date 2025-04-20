@@ -6,7 +6,7 @@ layout: home
 ---
 
 <div class="banner-carousel banner-carousel-2 mb-0">
-  <div class="banner-carousel-item" style="background-image:url(/assets/images/slider-main/wire-mesh-slider-2.jpeg)">
+  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-2.jpeg)">
     <div class="container">
         <div class="box-slider-content">
           <div class="box-slider-text">
@@ -21,7 +21,7 @@ layout: home
     </div>
   </div>
 
-  <div class="banner-carousel-item" style="background-image:url(/assets/images/slider-main/wire-mesh-slider-3.png)">
+  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-3.png)">
     <div class="slider-content text-left">
         <div class="container">
           <div class="box-slider-content">
@@ -488,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="/assets/images/services/wire-mesh-product-1.png" alt="Wire Mesh Cloth">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/wire-mesh-product-1.png" alt="Wire Mesh Cloth">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
@@ -502,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="/assets/images/services/vibrating-screen-1.png" alt="Vibrating Screen Cloth">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/vibrating-screen-1.png" alt="Vibrating Screen Cloth">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="/assets/images/services/chain-link-fencing-1.jpeg" alt="Chain Link Fencing">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/chain-link-fencing-1.jpeg" alt="Chain Link Fencing">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="row">
           <div class="col-md-3 col-sm-6 ts-facts">
               <div class="ts-facts-img">
-                <img loading="lazy" src="/assets/images/icon-image/fact1.png" alt="facts-img">
+                <img loading="lazy" src="{{ site.baseurl }}/assets/images/icon-image/fact1.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span>+</h2>
@@ -546,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="/assets/images/icon-image/fact2.png" alt="facts-img">
+                <img loading="lazy" src="{{ site.baseurl }}/assets/images/icon-image/fact2.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="500">0</span>+</h2>
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="/assets/images/icon-image/fact3.png" alt="facts-img">
+                <img loading="lazy" src="{{ site.baseurl }}/assets/images/icon-image/fact3.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="25">0</span>+</h2>
@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
               <div class="ts-facts-img">
-                <img loading="lazy" src="/assets/images/icon-image/fact4.png" alt="facts-img">
+                <img loading="lazy" src="{{ site.baseurl }}/assets/images/icon-image/fact4.png" alt="facts-img">
               </div>
               <div class="ts-facts-content">
                 <h2 class="ts-facts-num"><span class="counterUp" data-count="5">0</span>+</h2>
@@ -608,7 +608,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div><!-- Col end -->
 
         <div class="col-lg-4 text-center">
-          <img loading="lazy" class="img-fluid" src="/assets/images/services/indian-worker-2.jpeg" alt="service-avater-image">
+          <img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/services/indian-worker-2.jpeg" alt="service-avater-image">
         </div><!-- Col end -->
 
         <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
@@ -651,7 +651,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </span>
 
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="/assets/images/clients/testimonial1.png" alt="testimonial">
+                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial1.png" alt="testimonial">
                       <div class="quote-item-info">
                           <h3 class="quote-author">Gabriel Denis</h3>
                           <span class="quote-subtext">Chairman, OKT</span>
@@ -670,7 +670,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </span>
 
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="/assets/images/clients/testimonial2.png" alt="testimonial">
+                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial2.png" alt="testimonial">
                       <div class="quote-item-info">
                           <h3 class="quote-author">Weldon Cash</h3>
                           <span class="quote-subtext">CFO, First Choice</span>
@@ -689,7 +689,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </span>
 
                     <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="/assets/images/clients/testimonial3.png" alt="testimonial">
+                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial3.png" alt="testimonial">
                       <div class="quote-item-info">
                           <h3 class="quote-author">Minter Puchan</h3>
                           <span class="quote-subtext">Director, AKT</span>
@@ -712,37 +712,37 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="row all-clients">
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client1.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client1.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 1 end -->
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client2.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client2.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 2 end -->
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client3.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client3.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 3 end -->
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client4.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client4.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 4 end -->
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client5.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client5.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 5 end -->
 
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="/assets/images/clients/client6.png" alt="clients-logo" /></a>
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client6.png" alt="clients-logo" /></a>
                 </figure>
               </div><!-- Client 6 end -->
 
