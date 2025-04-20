@@ -8,15 +8,15 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.9.0"
+gem "jekyll", "~> 4.2.0"
 
 # This is the default theme for new Jekyll sites.
-gem "minima", "2.5.0"
+gem "minima", "~> 2.5.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.15.1"
-  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-seo-tag", "~> 2.6"
   gem "jekyll-sitemap", "~> 1.4"
   gem "jekyll-remote-theme", "~> 0.4.3"
 end
@@ -35,8 +35,7 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# kramdown v2 ships without the gfm parser by default. If you're using
-# kramdown v1, comment out this line.
+# kramdown with GFM parser
 gem "kramdown-parser-gfm"
 
 gem "webrick", "~> 1.8"
