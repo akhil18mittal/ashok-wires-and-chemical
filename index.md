@@ -4,106 +4,6 @@
 
 layout: home
 ---
-
-<div class="banner-carousel banner-carousel-2 mb-0">
-  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-2.jpeg)">
-    <div class="container">
-        <div class="box-slider-content">
-          <div class="box-slider-text">
-              <h2 class="box-slide-title">25+ Years of Excellence in</h2>
-              <h3 class="box-slide-sub-title">Industrial Wire Solutions</h3>
-              <p class="box-slide-description">Ashok Wires & Chemicals is a trusted name in high-quality wire mesh and screen cloth manufacturing, serving diverse industries with innovation and precision.</p>
-              <p>
-                <a href="#products" class="slider btn btn-primary scroll">Our Products</a>
-              </p>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-3.png)">
-    <div class="slider-content text-left">
-        <div class="container">
-          <div class="box-slider-content">
-              <div class="box-slider-text">
-                <h2 class="box-slide-title">Quality You Can Rely On</h2>
-                <h3 class="box-slide-sub-title">Tailored Solutions for Every Industry</h3>
-                <p class="box-slide-description">With over 25 years of expertise, we provide customized wire mesh solutions for global markets, ensuring durability, efficiency, and cost-effectiveness.</p>
-                <p><a href="#about" class="slider btn btn-primary scroll" aria-label="about-us">About Us</a></p>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-<section class="call-to-action no-padding">
-  <div class="container">
-    <div class="action-style-box">
-        <div class="row">
-          <div class="col-md-8 text-center text-md-left">
-              <div class= "call-to-action-text">
-                <h3 class="action-title">We Deliver Strength, Precision, and Reliability</h3>
-              </div>
-          </div><!-- Col end -->
-          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
-              <div class="call-to-action-btn">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Quote</button>
-              </div>
-          </div><!-- col end -->
-        </div><!-- row end -->
-    </div><!-- Action style box -->
-  </div><!-- Container end -->
-</section><!-- Action end -->
-
-<!-- Quote Modal -->
-<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form action="https://formspree.io/f/xpwpveno" method="POST" id="quote-form">
-          <input type="hidden" name="_subject" value="New Quote Request - Ashok Wires">
-          <input type="hidden" name="form_type" value="quote">
-          <input type="hidden" name="_next" value="/?submitted=quote#quote-success">
-          <div class="mb-3">
-            <label for="name" class="form-label">Name *</label>
-            <input type="text" class="form-control" id="name" name="name" required
-              oninvalid="this.setCustomValidity('Please enter your name')" 
-              oninput="this.setCustomValidity('')">
-          </div>
-          <div class="mb-3">
-            <label for="mobile" class="form-label">Mobile Number *</label>
-            <input type="tel" class="form-control" id="mobile" name="mobile" required
-              pattern="[0-9]{10}"
-              oninvalid="this.setCustomValidity('Please enter a valid 10-digit mobile number')" 
-              oninput="this.setCustomValidity('')">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email (Optional)</label>
-            <input type="email" class="form-control" id="email" name="email">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message (Optional)</label>
-            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
-          </div>
-          <small class="text-muted d-block mb-3">* Required fields</small>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="quote-success" style="display: none;" class="alert alert-success text-center my-3">
-  Thank you for your quote request. We will get back to you soon!
-</div>
-
 <style>
 /* Service box image styles */
 .ts-service-image-wrapper {
@@ -427,56 +327,105 @@ layout: home
 
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Check for form submission success
-  const urlParams = new URLSearchParams(window.location.search);
-  const submitted = urlParams.get('submitted');
-  const successElement = document.getElementById('quote-success');
-  
-  if (submitted === 'quote' && successElement) {
-    successElement.style.display = 'block';
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      successElement.style.display = 'none';
-    }, 5000);
-  }
 
-  // Add smooth scrolling to all links with class 'scroll'
-  document.querySelectorAll('a.scroll').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        const headerOffset = 100; // Offset for fixed header
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+<div class="banner-carousel banner-carousel-2 mb-0">
+  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-2.jpeg)">
+    <div class="container">
+        <div class="box-slider-content">
+          <div class="box-slider-text">
+              <h2 class="box-slide-title">25+ Years of Excellence in</h2>
+              <h3 class="box-slide-sub-title">Industrial Wire Solutions</h3>
+              <p class="box-slide-description">Ashok Wires & Chemicals is a trusted name in high-quality wire mesh and screen cloth manufacturing, serving diverse industries with innovation and precision.</p>
+              <p>
+                <a href="#products" class="slider btn btn-primary scroll">Our Products</a>
+              </p>
+          </div>
+        </div>
+    </div>
+  </div>
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+  <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-3.png)">
+    <div class="slider-content text-left">
+        <div class="container">
+          <div class="box-slider-content">
+              <div class="box-slider-text">
+                <h2 class="box-slide-title">Quality You Can Rely On</h2>
+                <h3 class="box-slide-sub-title">Tailored Solutions for Every Industry</h3>
+                <p class="box-slide-description">With over 25 years of expertise, we provide customized wire mesh solutions for global markets, ensuring durability, efficiency, and cost-effectiveness.</p>
+                <p><a href="#about" class="slider btn btn-primary scroll" aria-label="about-us">About Us</a></p>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
 
-  // Initialize modal
-  var modalElement = document.getElementById('quoteModal');
-  if (modalElement) {
-    var modal = new bootstrap.Modal(modalElement);
-    
-    // Add click event to the button
-    var quoteButton = document.querySelector('[data-bs-target="#quoteModal"]');
-    if (quoteButton) {
-      quoteButton.addEventListener('click', function() {
-        modal.show();
-      });
-    }
-  }
-});
-</script>
+<section class="call-to-action no-padding">
+  <div class="container">
+    <div class="action-style-box">
+        <div class="row">
+          <div class="col-md-8 text-center text-md-left">
+              <div class= "call-to-action-text">
+                <h3 class="action-title">We Deliver Strength, Precision, and Reliability</h3>
+              </div>
+          </div><!-- Col end -->
+          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+              <div class="call-to-action-btn">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Quote</button>
+              </div>
+          </div><!-- col end -->
+        </div><!-- row end -->
+    </div><!-- Action style box -->
+  </div><!-- Container end -->
+</section><!-- Action end -->
+
+<!-- Quote Modal -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="https://formspree.io/f/xpwpveno" method="POST" id="quote-form">
+          <input type="hidden" name="_subject" value="New Quote Request - Ashok Wires">
+          <input type="hidden" name="form_type" value="quote">
+          <input type="hidden" name="_next" value="/?submitted=quote#quote-success">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name *</label>
+            <input type="text" class="form-control" id="name" name="name" required
+              oninvalid="this.setCustomValidity('Please enter your name')" 
+              oninput="this.setCustomValidity('')">
+          </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile Number *</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" required
+              pattern="[0-9]{10}"
+              oninvalid="this.setCustomValidity('Please enter a valid 10-digit mobile number')" 
+              oninput="this.setCustomValidity('')">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email (Optional)</label>
+            <input type="email" class="form-control" id="email" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message (Optional)</label>
+            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+          </div>
+          <small class="text-muted d-block mb-3">* Required fields</small>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="quote-success" style="display: none;" class="alert alert-success text-center my-3">
+  Thank you for your quote request. We will get back to you soon!
+</div>
 
 <section id="products" class="ts-features pb-2">
   <div class="container">
@@ -755,3 +704,54 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <!--/ Container end -->
 </section><!-- Content end -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Check for form submission success
+  const urlParams = new URLSearchParams(window.location.search);
+  const submitted = urlParams.get('submitted');
+  const successElement = document.getElementById('quote-success');
+  
+  if (submitted === 'quote' && successElement) {
+    successElement.style.display = 'block';
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      successElement.style.display = 'none';
+    }, 5000);
+  }
+
+  // Add smooth scrolling to all links with class 'scroll'
+  document.querySelectorAll('a.scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        const headerOffset = 100; // Offset for fixed header
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Initialize modal
+  var modalElement = document.getElementById('quoteModal');
+  if (modalElement) {
+    var modal = new bootstrap.Modal(modalElement);
+    
+    // Add click event to the button
+    var quoteButton = document.querySelector('[data-bs-target="#quoteModal"]');
+    if (quoteButton) {
+      quoteButton.addEventListener('click', function() {
+        modal.show();
+      });
+    }
+  }
+});
+</script>
