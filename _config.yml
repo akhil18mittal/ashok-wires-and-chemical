@@ -18,8 +18,8 @@ email: your-email@ashokwires.com
 description: >-
   Ashok Wires & Chemicals is a leading manufacturer of industrial wire products, since 1996 serving diverse 
   heavy industries with innovative screen cloth.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ashok-wires-and-chemical" # the subpath of your site, e.g. /blog
+url: "https://akhil18mittal.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
