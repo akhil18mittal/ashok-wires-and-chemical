@@ -41,8 +41,16 @@ sass:
 include:
   - assets/css
   - assets/js
-  - assets/plugins
   - assets/images
+  - assets/images/clients
+  - assets/images/services
+  - assets/images/icon-image
+  - assets/images/slider-main
+  - assets/images/banner
+  - assets/images/news
+  - assets/images/projects
+  - assets/images/slider-pages
+  - assets/images/team
   - assets/documents
 
 # Exclude from processing
