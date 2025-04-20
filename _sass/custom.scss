@@ -1,0 +1,146 @@
+// Custom variables
+$yellow-color: #FFD700;
+$dark-color: #333333;
+
+// Your custom styles below
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+  
+  .section-sub-title {
+    display: block;
+    color: $yellow-color;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark-color;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 60%;
+      height: 3px;
+      background-color: $yellow-color;
+      margin: 10px auto 0;
+    }
+  }
+}
+
+// Footer styles
+.footer {
+  background-color: $dark-color;
+  padding: 60px 0 30px;
+  color: #fff;
+  
+  .widget-title {
+    color: #fff;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background-color: $yellow-color;
+      margin-top: 10px;
+    }
+  }
+  
+  .contact-form {
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      height: 45px;
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 14px;
+      
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    
+    textarea.form-control {
+      height: 100px;
+      resize: none;
+    }
+    
+    .btn {
+      background-color: $yellow-color;
+      color: $dark-color;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 12px 30px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: transparent;
+        border-color: $yellow-color;
+        color: $yellow-color;
+      }
+    }
+  }
+  
+  .copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    a {
+      color: $yellow-color;
+      
+      &:hover {
+        color: lighten($yellow-color, 10%);
+      }
+    }
+  }
+}
+
+// Back to top button
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: $yellow-color;
+  color: $dark-color;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background-color: darken($yellow-color, 5%);
+  }
+} 
