@@ -3,19 +3,19 @@
   <!-- Basic Page Needs
 ================================================== -->
   <meta charset="utf-8">
-  <title>Constra - Construction Html5 Template</title>
+  <title>{{ site.title | default: "Ashok Wires & Chemicals" }}</title>
 
   <!-- Mobile Specific Metas
 ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Construction Html5 Template">
+  <meta name="description" content="Ashok Wires & Chemicals - Leading manufacturer of industrial wire products and screen cloth since 1996. Quality products, efficient service, and competitive pricing.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name=author content="Themefisher">
-  <meta name=generator content="Themefisher Constra HTML Template v1.0">
+  <meta name="author" content="Ashok Wires & Chemicals">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 
   <!-- Favicon
 ================================================== -->
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
 
   <!-- CSS
 ================================================== -->
@@ -31,7 +31,7 @@
   <!-- Colorbox -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/example1/colorbox.min.css" rel="stylesheet">
   <!-- Template styles-->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 
   {%- seo -%}
   {%- feed_meta -%}
