@@ -21,7 +21,7 @@ description: >-
   Google search results) and in your feed.xml site description.
 # _config.yml
 url: "https://akhil18mittal.github.io"
-baseurl: "/ashok-wires-and-chemical"
+baseurl: ""
 
 twitter_username: jekyllrb
 github_username:  jekyll
