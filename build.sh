@@ -1,11 +1,12 @@
 #!/bin/bash
 set -e
 
-echo "Updating Ruby system..."
-gem update --system
+# Don't update Ruby system - it requires Ruby 3.1+ but Netlify uses 2.7.8
+# echo "Updating Ruby system..."
+# gem update --system
 
 echo "Installing bundler..."
-gem install bundler
+gem install bundler -v "${BUNDLER_VERSION:-2.3.26}"
 
 echo "Installing dependencies..."
 bundle install
