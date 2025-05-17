@@ -19,8 +19,9 @@ description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-# _config.yml
-url: "https://akhil18mittal.github.io"
+
+# Site URL configuration
+url: "https://ashokwires.com"
 baseurl: ""
 
 twitter_username: jekyllrb
