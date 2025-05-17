@@ -3,15 +3,71 @@
   <!-- Basic Page Needs
 ================================================== -->
   <meta charset="utf-8">
-  <title>{{ site.title | default: "Ashok Wires & Chemicals" }}</title>
+  <title>{%- if page.title -%}{{ page.title | strip_html | strip_newlines }} | Ashok Wires & Chemicals - Leading Wire Mesh Manufacturer{%- else -%}Ashok Wires & Chemicals - Premium Wire Mesh & Screen Cloth Manufacturer in India{%- endif -%}</title>
 
   <!-- Mobile Specific Metas
 ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Ashok Wires & Chemicals - Leading manufacturer of industrial wire products and screen cloth since 1996. Quality products, efficient service, and competitive pricing.">
+  <meta name="description" content="Ashok Wires & Chemicals is a leading manufacturer of high-quality wire mesh, vibrating screen cloth, and chain link fencing. With 25+ years of experience, we provide premium industrial wire solutions across India and globally.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Ashok Wires & Chemicals">
   <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <meta name="keywords" content="wire mesh manufacturer, vibrating screen cloth, chain link fencing, industrial wire solutions, wire mesh supplier, screen cloth manufacturer, India">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Ashok Wires & Chemicals - Premium Wire Mesh Manufacturer">
+  <meta property="og:description" content="Leading manufacturer of high-quality wire mesh, vibrating screen cloth, and chain link fencing. 25+ years of excellence in industrial wire solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ashok Wires & Chemicals - Premium Wire Mesh Manufacturer">
+  <meta name="twitter:description" content="Leading manufacturer of high-quality wire mesh, vibrating screen cloth, and chain link fencing. 25+ years of excellence in industrial wire solutions.">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/logo.png">
+
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ashok Wires & Chemicals",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/logo.png",
+    "description": "Leading manufacturer of high-quality wire mesh, vibrating screen cloth, and chain link fencing in India.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ashokwires",
+      "https://www.linkedin.com/company/ashok-wires-and-chemicals"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ashok Wires & Chemicals",
+    "url": "{{ site.url }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="geo.region" content="IN" />
+  <meta name="geo.placename" content="India" />
+  <meta name="geo.position" content="28.7041;77.1025" />
+  <meta name="ICBM" content="28.7041, 77.1025" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="language" content="English" />
 
   <!-- Favicon
 ================================================== -->

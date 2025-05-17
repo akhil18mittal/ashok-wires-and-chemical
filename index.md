@@ -333,11 +333,11 @@ layout: home
     <div class="container">
         <div class="box-slider-content">
           <div class="box-slider-text">
-              <h2 class="box-slide-title">25+ Years of Excellence in</h2>
-              <h3 class="box-slide-sub-title">Industrial Wire Solutions</h3>
+              <h1 class="box-slide-title">25+ Years of Excellence in</h1>
+              <h2 class="box-slide-sub-title">Industrial Wire Solutions</h2>
               <p class="box-slide-description">Ashok Wires & Chemicals is a trusted name in high-quality wire mesh and screen cloth manufacturing, serving diverse industries with innovation and precision.</p>
               <p>
-                <a href="#products" class="slider btn btn-primary scroll">Our Products</a>
+                <a href="#products" class="slider btn btn-primary scroll" aria-label="View our products">Our Products</a>
               </p>
           </div>
         </div>
@@ -345,14 +345,14 @@ layout: home
   </div>
 
   <div class="banner-carousel-item" style="background-image:url({{ site.baseurl }}/assets/images/slider-main/wire-mesh-slider-3.png)">
-    <div class="slider-content text-left">
+    <div class="slider-content">
         <div class="container">
           <div class="box-slider-content">
               <div class="box-slider-text">
-                <h2 class="box-slide-title">Quality You Can Rely On</h2>
-                <h3 class="box-slide-sub-title">Tailored Solutions for Every Industry</h3>
+                <h1 class="box-slide-title">Quality You Can Rely On</h1>
+                <h2 class="box-slide-sub-title">Tailored Solutions for Every Industry</h2>
                 <p class="box-slide-description">With over 25 years of expertise, we provide customized wire mesh solutions for global markets, ensuring durability, efficiency, and cost-effectiveness.</p>
-                <p><a href="#about" class="slider btn btn-primary scroll" aria-label="about-us">About Us</a></p>
+                <p><a href="#about" class="slider btn btn-primary scroll" aria-label="Learn more about us">About Us</a></p>
               </div>
           </div>
         </div>
@@ -437,47 +437,47 @@ layout: home
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/wire-mesh-product-1.png" alt="Wire Mesh Cloth">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/wire-mesh-product-1.png" alt="Wire Mesh Cloth - Premium Quality Industrial Wire Mesh Manufacturer in India">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
-                    <h3 class="service-box-title"><a href="">Wire Mesh Cloth</a></h3>
-                    <p>We offer a wide range of wire mesh cloth suitable for residential, commercial, industrial, and agricultural use. Available in aperture sizes from 2mm to 100mm and wire diameters from 2mm to 12mm, it's made from Stainless Steel, Spring Steel, Mild Steel, and G.I. in various weaves like Double Crimp, Dovex, and Lock Crimp.</p>
+                    <h3 class="service-box-title"><a href="#wire-mesh">Wire Mesh Cloth</a></h3>
+                    <p>Premium quality wire mesh cloth for residential, commercial, industrial, and agricultural applications. Available in aperture sizes from 2mm to 100mm and wire diameters from 2mm to 12mm. Manufactured using high-grade Stainless Steel, Spring Steel, Mild Steel, and G.I. with various weaves including Double Crimp, Dovex, and Lock Crimp.</p>
                 </div>
               </div>
-          </div><!-- Service1 end -->
-        </div><!-- Col 1 end -->
+          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/vibrating-screen-1.png" alt="Vibrating Screen Cloth">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/vibrating-screen-1.png" alt="Vibrating Screen Cloth - Industrial Screening Solutions">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
-                    <h3 class="service-box-title"><a href="">Vibrating Screen Cloth</a></h3>
-                    <p>Our Vibrating Screen Cloth is ideal for mining and industrial screening, with sizes ranging from 0.5mm to 100mm and wire diameters from 0.30mm to 14mm. Made from premium Spring Steel and Stainless Steel from Usha Martin/Tata Steel, it ensures durability and effective performance under heavy vibration.</p>
+                    <h3 class="service-box-title"><a href="#vibrating-screen">Vibrating Screen Cloth</a></h3>
+                    <p>High-performance vibrating screen cloth designed for mining and industrial screening applications. Available in sizes from 0.5mm to 100mm with wire diameters from 0.30mm to 14mm. Manufactured using premium Spring Steel and Stainless Steel from Usha Martin/Tata Steel for superior durability and performance under heavy vibration.</p>
                 </div>
               </div>
-          </div><!-- Service2 end -->
-        </div><!-- Col 2 end -->
+          </div>
+        </div>
 
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="ts-service-box">
               <div class="ts-service-image-wrapper">
-                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/chain-link-fencing-1.jpeg" alt="Chain Link Fencing">
+                <img loading="lazy" class="w-100" src="{{ site.baseurl }}/assets/images/services/chain-link-fencing-1.jpeg" alt="Chain Link Fencing - Secure Boundary Solutions">
               </div>
               <div class="d-flex">
                 <div class="ts-service-info">
-                    <h3 class="service-box-title"><a href="">Chain Link Fencing</a></h3>
-                    <p>Chain Link Fencing is a durable fencing solution made from interwoven wires, available in wire diameters ranging from 1.6mm to 4mm. Crafted using high-quality Galvanized Iron (G.I.), it offers excellent strength, corrosion resistance, and security, making it ideal for residential, industrial, and agricultural boundary protection.</p>
+                    <h3 class="service-box-title"><a href="#chain-link">Chain Link Fencing</a></h3>
+                    <p>Durable and secure chain link fencing solution made from interwoven wires. Available in wire diameters from 1.6mm to 4mm. Manufactured using high-quality Galvanized Iron (G.I.) for excellent strength, corrosion resistance, and security. Ideal for residential, industrial, and agricultural boundary protection.</p>
                 </div>
               </div>
-          </div><!-- Service3 end -->
-        </div><!-- Col 3 end -->
-    </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- Feature area end -->
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <section id="facts" class="facts-area dark-bg">
   <div class="container">
@@ -542,36 +542,36 @@ layout: home
         <div class="col-lg-4">
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-info">
-                <h3 class="service-box-title"><a href="#">Uncompromising Quality Assurance</a></h3>
-                <p>We prioritize excellence by sourcing the finest raw materials from industry leaders like USHA MARTIN and TATA STEEL. Our rigorous quality assurance process ensures that every product meets the highest standards with quality check done for each material before dispatch, providing you with confidence in every purchase along with Test Certificates.</p>
+                <h3 class="service-box-title"><a href="#">Quality Commitment</a></h3>
+                <p>We prioritize excellence by sourcing premium raw materials from USHA MARTIN and TATA STEEL. Our rigorous quality assurance process ensures every product meets the highest standards, with thorough quality checks before dispatch. This commitment provides you confidence in every purchase, backed by Test Certificates.</p>
               </div>
           </div><!-- Service 1 end -->
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-info">
                 <h3 class="service-box-title"><a href="#">Proactive Customer Support</a></h3>
-                <p>We value your time and inquiries. Our customer support team is committed to providing timely responses to your questions, both via email and phone. We strive to ensure that your needs are met with efficiency.</p>
+                <p>We value your time and inquiries. Our dedicated customer support team provides prompt responses to your questions through email and phone. We ensure your needs are met efficiently, maintaining clear communication, and offering personalized solutions for your specific requirements and challenges.</p>
               </div>
           </div><!-- Service 2 end -->
 
         </div><!-- Col end -->
 
         <div class="col-lg-4 text-center">
-          <img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/services/indian-worker-2.jpeg" alt="service-avater-image">
+          <img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/services/indian-worker-2.jpeg" alt="service-avater-image" style="width: 90%">
         </div><!-- Col end -->
 
         <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-info">
                 <h3 class="service-box-title"><a href="#">Dependable On-Time Delivery</a></h3>
-                <p>Renowned for our robust supply chain management, we implement effective time management principles to guarantee on-time delivery. Trust us to be your reliable partner, ensuring that your supplies arrive when you need them most. Time is precious.</p>
+                <p>Renowned for our robust supply chain management, we implement effective time management principles to guarantee on-time delivery. Trust us to be your reliable partner, ensuring that your supplies arrive when you need them most. Time is precious, and we understand the critical importance of meeting your deadlines consistently.</p>
               </div>
           </div><!-- Service 4 end -->
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-info">
                 <h3 class="service-box-title"><a href="#">Client Retention Excellence</a></h3>
-                <p>Building lasting relationships is at the heart of our business. We establish annual pricing agreements for our valued clients, ensuring transparency and reliability. Prioritizing deliveries of screen cloth based on urgency reflects our commitment to supporting your operations effectively.</p>
+                <p>Building lasting relationships is at the heart of our business. We establish annual pricing agreements for our valued clients, ensuring transparency and reliability. Prioritizing deliveries of screen cloth based on urgency reflects our commitment to supporting your operations effectively and maintaining long-term partnerships.</p>
               </div>
           </div><!-- Service 5 end -->
         </div><!-- Col end -->
@@ -580,130 +580,6 @@ layout: home
   </div>
   <!--/ Container end -->
 </section><!-- Service end -->
-
-<section id="clients" class="content">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-          <div class="section-title-wrapper text-start">
-            <span class="section-sub-title">CLIENT</span>
-            <h2 class="section-title">TESTIMONIALS</h2>
-          </div>
-
-          <div id="testimonial-slide" class="testimonial-slide">
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Question ran over her cheek When she reached the first hills of the Italic Mountains, she had a last
-                      view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the
-                      subline of her own road.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial1.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Gabriel Denis</h3>
-                          <span class="quote-subtext">Chairman, OKT</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 1 end -->
-
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi aliquip consequat.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial2.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Weldon Cash</h3>
-                          <span class="quote-subtext">CFO, First Choice</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 2 end -->
-
-              <div class="item">
-                <div class="quote-item">
-                    <span class="quote-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitoa tion ullamco laboris
-                      nisi ut commodo consequat.
-                    </span>
-
-                    <div class="quote-item-footer">
-                      <img loading="lazy" class="testimonial-thumb" src="{{ site.baseurl }}/assets/images/clients/testimonial3.png" alt="testimonial">
-                      <div class="quote-item-info">
-                          <h3 class="quote-author">Minter Puchan</h3>
-                          <span class="quote-subtext">Director, AKT</span>
-                      </div>
-                    </div>
-                </div><!-- Quote item end -->
-              </div>
-              <!--/ Item 3 end -->
-
-          </div>
-          <!--/ Testimonial carousel end-->
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          <div class="section-title-wrapper text-start">
-            <span class="section-sub-title">OUR</span>
-            <h2 class="section-title">HAPPY CLIENTS</h2>
-          </div>
-
-          <div class="row all-clients">
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client1.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 1 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client2.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 2 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client3.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 3 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client4.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 4 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client5.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 5 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/clients/client6.png" alt="clients-logo" /></a>
-                </figure>
-              </div><!-- Client 6 end -->
-
-          </div><!-- Clients row end -->
-
-        </div><!-- Col end -->
-
-    </div>
-    <!--/ Content row end -->
-  </div>
-  <!--/ Container end -->
-</section><!-- Content end -->
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
