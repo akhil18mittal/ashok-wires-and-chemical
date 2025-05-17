@@ -461,10 +461,16 @@ layout: home
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="https://formspree.io/f/xpwpveno" method="POST" id="quote-form">
-          <input type="hidden" name="_subject" value="New Quote Request - Ashok Wires">
+        <form id="quote-form">
           <input type="hidden" name="form_type" value="quote">
-          <input type="hidden" name="_next" value="/?submitted=quote#quote-success">
+          <input type="hidden" name="page" value="home">
+          <input type="hidden" id="quote-timestamp" name="timestamp" value="">
+          
+          <!-- Honeypot field (hidden from real users, but bots will fill it) -->
+          <div style="display:none;">
+            <input type="text" id="website" name="website">
+          </div>
+          
           <div class="mb-3">
             <label for="name" class="form-label">Name *</label>
             <input type="text" class="form-control" id="name" name="name" required
@@ -489,6 +495,12 @@ layout: home
           <small class="text-muted d-block mb-3">* Required fields</small>
           <div class="text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <div id="quote-form-success" class="alert alert-success mt-3" style="display: none;">
+            Thank you for your quote request. We will get back to you soon!
+          </div>
+          <div id="quote-form-error" class="alert alert-danger mt-3" style="display: none;">
+            There was a problem sending your message. Please try again.
           </div>
         </form>
       </div>
@@ -666,6 +678,88 @@ layout: home
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize timestamp for quote form
+  const quoteTimestampField = document.getElementById('quote-timestamp');
+  if (quoteTimestampField) {
+    quoteTimestampField.value = Date.now().toString();
+  }
+  
+  // Handle quote form submission
+  const quoteForm = document.getElementById('quote-form');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      
+      // Get form elements
+      const submitBtn = quoteForm.querySelector('button[type="submit"]');
+      const successEl = document.getElementById('quote-form-success');
+      const errorEl = document.getElementById('quote-form-error');
+      
+      // Clear previous messages
+      successEl.style.display = 'none';
+      errorEl.style.display = 'none';
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+      
+      try {
+        // Convert form data to JSON
+        const formData = new FormData(quoteForm);
+        const formJson = Object.fromEntries(formData.entries());
+        
+        // Post to serverless function
+        const response = await fetch('YOUR_FUNCTION_ENDPOINT', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formJson)
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.status === 'success') {
+          // Show success message
+          successEl.style.display = 'block';
+          quoteForm.reset();
+          
+          // Reset timestamp
+          quoteTimestampField.value = Date.now().toString();
+          
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            successEl.style.display = 'none';
+            
+            // Close modal
+            var quoteModal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
+            if (quoteModal) {
+              quoteModal.hide();
+            }
+            
+            // Show success message outside modal
+            document.getElementById('quote-success').style.display = 'block';
+            setTimeout(() => {
+              document.getElementById('quote-success').style.display = 'none';
+            }, 5000);
+          }, 1500);
+        } else {
+          // Show error message
+          errorEl.textContent = data.error || 'There was a problem sending your message. Please try again.';
+          errorEl.style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        errorEl.textContent = 'Network error. Please try again later.';
+        errorEl.style.display = 'block';
+      } finally {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit';
+      }
+    });
+  }
+
   // Check for form submission success
   const urlParams = new URLSearchParams(window.location.search);
   const submitted = urlParams.get('submitted');

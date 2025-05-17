@@ -1,0 +1,18 @@
+[build]
+  # This folder is cached between builds
+  publish = "_site"
+  command = "bundle exec jekyll build"
+  functions = "form-handler"
+
+# Redirects for the function
+[[redirects]]
+  from = "/form-api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

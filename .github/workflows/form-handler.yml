@@ -1,0 +1,62 @@
+name: Form Submission Handler
+
+on:
+  repository_dispatch:
+    types: [form-submission]
+
+jobs:
+  email-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate submission
+        id: validate
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const payload = context.payload.client_payload;
+            
+            // Basic validation
+            if (!payload || !payload.name || !payload.mobile) {
+              core.setFailed('Invalid form submission');
+              return;
+            }
+            
+            // Check honeypot (if honeypot field has content, it's likely spam)
+            if (payload.website) {
+              core.setFailed('Spam detected');
+              return;
+            }
+            
+            // Set outputs for email
+            const formType = payload.form_type || 'contact';
+            const subject = formType === 'quote' 
+              ? `Website Quote Request: ${payload.name}` 
+              : `Website Contact: ${payload.name}`;
+              
+            core.setOutput('subject', subject);
+            core.setOutput('body', `
+              Form Type: ${formType}
+              Name: ${payload.name}
+              Mobile: ${payload.mobile || 'Not provided'}
+              Email: ${payload.email || 'Not provided'}
+              
+              Message:
+              ${payload.message || 'No message provided'}
+              
+              Sent from: ${payload.page || 'Website'}
+              Time: ${new Date().toISOString()}
+            `);
+      
+      - name: Send email notification
+        if: steps.validate.outcome == 'success'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ steps.validate.outputs.subject }}
+          body: ${{ steps.validate.outputs.body }}
+          to: ${{ secrets.RECIPIENT_EMAIL }}
+          from: "Ashok Wires Website <${{ secrets.MAIL_USERNAME }}>"
+          secure: true 

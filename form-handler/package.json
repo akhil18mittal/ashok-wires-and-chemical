@@ -1,0 +1,9 @@
+{
+  "name": "form-handler",
+  "version": "1.0.0",
+  "description": "Form handler for Ashok Wires & Chemicals website",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+} 
