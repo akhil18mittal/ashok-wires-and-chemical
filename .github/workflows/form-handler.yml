@@ -59,6 +59,6 @@ jobs:
           body: ${{ steps.validate.outputs.body }}
           to: ${{ secrets.RECIPIENT_EMAIL }}
           from: "Ashok Wires Website <${{ secrets.MAIL_USERNAME }}>"
-          secure: true
-          security: starttls
+          secure: false
+          ignore_cert: true
           priority: high 
