@@ -6,6 +6,8 @@
 
 [build.environment]
   RUBY_VERSION = "3.2.2"
+  NODE_VERSION = "16"
+  NPM_VERSION = "8"
 
 # Redirects for the function
 [[redirects]]
