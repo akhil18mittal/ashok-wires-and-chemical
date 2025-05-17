@@ -1,8 +1,11 @@
 [build]
   # This folder is cached between builds
   publish = "_site"
-  command = "bundle exec jekyll build"
+  command = "JEKYLL_ENV=production bundle exec jekyll build"
   functions = "form-handler"
+
+[build.environment]
+  RUBY_VERSION = "3.2.2"
 
 # Redirects for the function
 [[redirects]]
