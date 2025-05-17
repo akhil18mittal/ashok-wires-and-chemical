@@ -1,17 +1,12 @@
 [build]
   # This folder is cached between builds
   publish = "_site"
-  command = "gem install bundler && bundle install && JEKYLL_ENV=production bundle exec jekyll build"
+  command = "./netlify-build.sh"
   functions = "form-handler"
 
 [build.environment]
-  RUBY = "3.2.2"
-  NODE_VERSION = "16"
-  # Disable version auto-detection entirely
-  MISE_AUTO_INSTALL = "false"
-  MISE_DISABLE_TOOLS = "python,ruby"
-  # Legacy compatibility
-  USE_RUBY_LATEST = "false"
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "2.7.2"
 
 # Redirects for the function
 [[redirects]]

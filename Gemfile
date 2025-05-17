@@ -39,11 +39,7 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 # kramdown with GFM parser
 gem "kramdown-parser-gfm"
 
-# Standard library gems that might be required
+# Required dependencies for newer Ruby versions
 gem "webrick", "~> 1.8"
 gem "logger"
 gem "csv"
-gem "fileutils"
-gem "net-http"
-gem "uri"
-gem "json"
