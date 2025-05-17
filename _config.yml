@@ -25,6 +25,20 @@ baseurl: ""
 
 twitter_username: jekyllrb
 github_username:  jekyll
+# Security headers
+headers:
+  - name: Strict-Transport-Security
+    value: "max-age=31536000; includeSubDomains; preload"
+  - name: X-Content-Type-Options
+    value: "nosniff"
+  - name: X-Frame-Options
+    value: "SAMEORIGIN"
+  - name: X-XSS-Protection
+    value: "1; mode=block"
+  - name: Referrer-Policy
+    value: "strict-origin-when-cross-origin"
+  - name: Content-Security-Policy
+    value: "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:;"
 
 # Build settings
 theme: minima
@@ -32,6 +46,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # SASS configuration
 sass:
