@@ -8,6 +8,9 @@
   RUBY_VERSION = "3.2.2"
   NODE_VERSION = "16"
   NPM_VERSION = "8"
+  PYTHON_VERSION = "3.10"
+  # Disable auto Python detection from Ruby version
+  MISE_AUTO_INSTALL = "0"
 
 # Redirects for the function
 [[redirects]]
