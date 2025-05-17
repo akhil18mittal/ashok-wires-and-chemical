@@ -50,6 +50,48 @@ layout: home
   color: #007bff;
 }
 
+/* Client logo styles */
+.clients-logo {
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.clients-logo:hover {
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.clients-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.clients-logo img {
+  max-width: 100%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: none;
+}
+
+.clients-logo:hover img {
+  transform: scale(1.05);
+}
+
 /* Contact Form Styles */
 .contact-form {
   padding: 20px;
@@ -665,6 +707,109 @@ layout: home
   </div>
   <!--/ Container end -->
 </section><!-- Service end -->
+
+<section id="clients" class="content">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12 mt-5 mt-lg-0">
+          <div class="section-title-wrapper">
+            <span class="section-sub-title">OUR</span>
+            <h2 class="section-title">TRUSTED CLIENTS</h2>
+          </div>
+          <p class="mb-4">Ashok Wires & Chemicals proudly serves leading companies across steel, power, mining, and manufacturing industries throughout India. Our wire mesh and industrial screening solutions are trusted by top-tier enterprises for quality, durability, and reliability.</p>
+          <div class="row all-clients">
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Bhilai Steel Plant - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/bhilai-steel.jpeg" alt="Bhilai Steel Plant - Steel Industry Client of Ashok Wires & Chemicals" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Sarda Energy & Minerals - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/sarda.jpeg" alt="Sarda Energy & Minerals - Industrial Client of Ashok Wires & Chemicals" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Real Group - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/real-group.jpeg" alt="Real Group - Manufacturing Partner of Ashok Wires & Chemicals" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Vasvani Industries - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/vasvani.jpeg" alt="Vasvani Industries - Wire Mesh Solutions Client" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Jayaswal Neco Industries - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/jayaswal-neco.png" alt="Jayaswal Neco Industries - Steel and Wire Mesh Client" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Hira Power - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/hira-power.jpeg" alt="Hira Power - Energy Sector Client of Ashok Wires & Chemicals" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Shree Bajrang - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/shree-bajrang.jpeg" alt="Shree Bajrang - Manufacturing Industry Client" /></a>
+                </figure>
+              </div>
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!" title="Kalyani - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/kalyani.jpeg" alt="Kalyani - Industrial Wire Mesh Solutions Client" /></a>
+                </figure>
+              </div>
+          </div>
+          <p class="mt-4">Our wire mesh products, vibrating screen cloth, and chain link fencing solutions are deployed across these industries for filtration, separation, screening, and safety applications. With 25+ years of experience serving these prestigious clients, we continue to deliver high-quality industrial wire solutions that meet rigorous standards.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schema.org structured data for better SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ashok Wires & Chemicals",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logo.png",
+  "description": "Ashok Wires & Chemicals is a trusted manufacturer of wire mesh cloth, vibrating screen cloth, and chain link fencing with over 25 years of excellence serving various industries.",
+  "sameAs": [
+    "https://www.facebook.com/ashokwires",
+    "https://twitter.com/ashokwires"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Wire Mesh Products",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Wire Mesh Cloth",
+          "description": "Premium quality wire mesh cloth for residential, commercial, industrial, and agricultural applications."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Vibrating Screen Cloth",
+          "description": "High-performance vibrating screen cloth designed for mining and industrial screening applications."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Chain Link Fencing",
+          "description": "Durable and secure chain link fencing solution made from interwoven wires."
+        }
+      }
+    ]
+  }
+}
+</script>
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919584872777?text=Hi%20Ashok%20Wires%20%26%20Chemicals,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
