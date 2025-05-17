@@ -1,7 +1,7 @@
 [build]
   # This folder is cached between builds
   publish = "_site"
-  command = "./netlify-build.sh"
+  command = "gem update --system && gem install bundler && bundle install && JEKYLL_ENV=production bundle exec jekyll build"
   functions = "form-handler"
 
 [build.environment]
