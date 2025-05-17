@@ -325,6 +325,79 @@ layout: home
   margin: 15px auto 0;
 }
 
+/* WhatsApp Button Styles */
+.whatsapp-float {
+  position: fixed;
+  bottom: 90px;
+  right: 10px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg, #25d366 60%, #128C7E 100%);
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 38px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  text-decoration: none;
+  opacity: 0.95;
+  animation: whatsapp-bounce 2s infinite 2s;
+  outline: none;
+}
+
+@keyframes whatsapp-bounce {
+  0%, 100% { transform: translateY(0); }
+  10% { transform: translateY(-8px); }
+  20% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+  40% { transform: translateY(0); }
+}
+
+.whatsapp-float:focus {
+  box-shadow: 0 0 0 4px #25d36655;
+}
+
+.whatsapp-float:hover {
+  background: linear-gradient(135deg, #128C7E 60%, #25d366 100%);
+  color: #FFF;
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.whatsapp-float i {
+  margin: 0;
+  font-size: 2.2em;
+  line-height: 1;
+}
+
+/* Tooltip */
+.whatsapp-float::after {
+  content: "Chat with us on WhatsApp";
+  position: absolute;
+  right: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #222;
+  color: #fff;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, right 0.3s;
+  z-index: 9999;
+}
+
+.whatsapp-float:hover::after, .whatsapp-float:focus::after {
+  opacity: 1;
+  right: 120%;
+}
+
 </style>
 
 
@@ -581,6 +654,16 @@ layout: home
   <!--/ Container end -->
 </section><!-- Service end -->
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919584872777?text=Hi%20Ashok%20Wires%20%26%20Chemicals,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp"
+   tabindex="0">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Check for form submission success
@@ -628,6 +711,16 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.show();
       });
     }
+  }
+
+  // Add WhatsApp button animation
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+  if (whatsappBtn) {
+    // Add entrance animation
+    setTimeout(() => {
+      whatsappBtn.style.opacity = '1';
+      whatsappBtn.style.transform = 'scale(1)';
+    }, 1000);
   }
 });
 </script>
