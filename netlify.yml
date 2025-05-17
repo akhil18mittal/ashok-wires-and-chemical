@@ -1,0 +1,12 @@
+build:
+  base: "."
+  publish: "_site"
+  command: "gem install bundler && bundle install && JEKYLL_ENV=production bundle exec jekyll build"
+  functions: "form-handler"
+  
+  environment:
+    RUBY: "3.2.2"
+    NODE_VERSION: "16"
+    USE_RUBY_LATEST: "false"
+    MISE_AUTO_INSTALL: "false"
+    MISE_DISABLE_TOOLS: "python,ruby" 
