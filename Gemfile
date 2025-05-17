@@ -22,6 +22,9 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from", "~> 0.16.0"
 end
 
+# Pin FFI to a compatible version
+gem "ffi", "~> 1.15.5"
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do
