@@ -758,7 +758,7 @@ layout: home
                     <a href="#!" title="Kalyani - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/kalyani.jpeg" alt="Kalyani - Industrial Wire Mesh Solutions Client" /></a>
                 </figure>
               </div>
-          </div>
+  </div>
           <p class="mt-4">Our wire mesh products, vibrating screen cloth, and chain link fencing solutions are deployed across these industries for filtration, separation, screening, and safety applications. With 25+ years of experience serving these prestigious clients, we continue to deliver high-quality industrial wire solutions that meet rigorous standards.</p>
         </div>
     </div>
@@ -854,7 +854,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formJson = Object.fromEntries(formData.entries());
         
         // Post to serverless function
-        const response = await fetch('YOUR_FUNCTION_ENDPOINT', {
+        const response = await fetch('https://ashok-wires.netlify.app/.netlify/functions/index', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
