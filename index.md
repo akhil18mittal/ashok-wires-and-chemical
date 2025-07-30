@@ -235,6 +235,61 @@ layout: home
   transform: translateY(-3px);
 }
 
+/* Footer Contact Info Styles */
+.footer-contact-info .contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact-info .contact-item i {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  color: #ffc107;
+}
+
+.footer-contact-info .contact-details h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.footer-contact-info .contact-details p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-contact-info .contact-details a {
+  transition: color 0.3s ease;
+}
+
+.footer-contact-info .contact-details a:hover {
+  color: #ffc107 !important;
+  text-decoration: none;
+}
+
+.footer-contact-info .contact-details .small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-contact-info .contact-item {
+    margin-bottom: 1.2rem;
+  }
+  
+  .footer-contact-info .contact-item i {
+    margin-right: 12px;
+    font-size: 1.1rem;
+  }
+}
+
 /* Contact Form Styles */
 .contact-form {
   margin-top: 15px;
@@ -312,6 +367,8 @@ layout: home
   right: 20px;
   bottom: 20px;
   z-index: 99;
+  display: none;
+  cursor: pointer;
 }
 
 #back-to-top .btn {
@@ -486,7 +543,7 @@ layout: home
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Quote</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quoteModal">Get a Quote</button>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->
@@ -500,7 +557,7 @@ layout: home
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form id="quote-form">
@@ -747,7 +804,7 @@ layout: home
                 <figure class="clients-logo">
                     <a href="#!" title="Hira Power - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/hira-power.jpeg" alt="Hira Power - Energy Sector Client of Ashok Wires & Chemicals" /></a>
                 </figure>
-              </div>
+    </div>
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
                     <a href="#!" title="Shree Bajrang - Client of Ashok Wires & Chemicals"><img loading="lazy" class="img-fluid" src="{{ site.baseurl }}/assets/images/shree-bajrang.jpeg" alt="Shree Bajrang - Manufacturing Industry Client" /></a>
@@ -876,11 +933,8 @@ document.addEventListener('DOMContentLoaded', function() {
           setTimeout(() => {
             successEl.style.display = 'none';
             
-            // Close modal
-            var quoteModal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
-            if (quoteModal) {
-              quoteModal.hide();
-            }
+            // Close modal using Bootstrap 4 syntax
+            $('#quoteModal').modal('hide');
             
             // Show success message outside modal
             document.getElementById('quote-success').style.display = 'block';
@@ -938,19 +992,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Initialize modal
-  var modalElement = document.getElementById('quoteModal');
-  if (modalElement) {
-    var modal = new bootstrap.Modal(modalElement);
-    
-    // Add click event to the button
-    var quoteButton = document.querySelector('[data-bs-target="#quoteModal"]');
-    if (quoteButton) {
-      quoteButton.addEventListener('click', function() {
-        modal.show();
-      });
-    }
-  }
+  // Modal initialization is handled automatically by Bootstrap 4
+  // No additional JavaScript needed for data-toggle="modal"
 
   // Add WhatsApp button animation
   const whatsappBtn = document.querySelector('.whatsapp-float');

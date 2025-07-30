@@ -74,16 +74,15 @@ jQuery(function ($) {
 		}
 		counter();
 
-		// scroll to top btn show/hide
-		function scrollTopBtn() {
-			var scroll = $window.scrollTop();
-			if (scroll >= 50) {
-				$backToTop.fadeIn();
+		// Add single back-to-top visibility handler
+		function backToTopHandler() {
+			if ($window.scrollTop() > 300) {
+				$backToTop.fadeIn(300);
 			} else {
-				$backToTop.fadeOut();
+				$backToTop.fadeOut(300);
 			}
 		}
-		scrollTopBtn();
+		backToTopHandler();
 	});
 
 	$document.ready(function () {
@@ -119,17 +118,13 @@ jQuery(function ($) {
 		}
 		navbarDropdown();
 
-		// back to top
-		function backToTop() {
-			$backToTop.on('click', function () {
-				$backToTop.tooltip('hide');
-				$body.animate({
-					scrollTop: 0
-				}, 800);
-				return false;
-			});
-		}
-		backToTop();
+		// Initialize back-to-top click handler
+		$backToTop.on('click', function (e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: 0
+			}, 800);
+		});
 
 		// banner-carousel
 		function bannerCarouselOne() {
